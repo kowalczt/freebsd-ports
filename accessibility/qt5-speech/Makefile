@@ -28,7 +28,7 @@ SPEECHD_VARS_OFF=	QMAKE_CONFIGURE_ARGS+=--no-feature-speechd
 FLITE_DESC=		Festival Lite Backend
 FLITE_LIB_DEPENDS=	libflite.so:audio/flite
 FLITE_USE=		QT=multimedia,network
-FLITE_VARS=		QMAKE_CONFIGURE_ARGS+=--feature-flite
+FLITE_VARS=		QMAKE_CONFIGURE_ARGS+=--feature-flite --no-feature-flite-alsa
 FLITE_VARS_OFF=		QMAKE_CONFIGURE_ARGS+=--no-feature-flite
 
 .include <bsd.port.mk>
