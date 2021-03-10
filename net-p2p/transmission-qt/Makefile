@@ -20,7 +20,7 @@ SLAVEPORT=	qt
 
 
 post-install: \ 
-    ${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps \
+    ${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps 
     ${INSTALL_DATA} ${WRKSRC}/qt/icons/transmission.png ${STAGEDIR}${PREFIX}/share/pixmaps/transmission-qt.png
 
 .include "${MASTERDIR}/Makefile"
