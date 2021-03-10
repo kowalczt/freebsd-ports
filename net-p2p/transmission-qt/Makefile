@@ -18,4 +18,8 @@ PLIST=		${.CURDIR}/pkg-plist
 
 SLAVEPORT=	qt
 
+post-install:
+	${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${WRKSRC}/qt/icons/transmission.png ${STAGEDIR}${PREFIX}/share/pixmaps/transmission.png
+
 .include "${MASTERDIR}/Makefile"
