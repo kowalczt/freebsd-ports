@@ -18,9 +18,9 @@ PLIST=		${.CURDIR}/pkg-plist
 
 SLAVEPORT=	qt
 
-.include <bsd.port.pre.mk>
-.include "${MASTERDIR}/Makefile"
 
-post-install: \
+post-install: \ 
     ${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps \
-    ${INSTALL_DATA} ${WRKSRC}/qt/icons/${file}.png ${STAGEDIR}${PREFIX}/share/pixmaps/${file}-qt.png
+    ${INSTALL_DATA} ${WRKSRC}/qt/icons/transmission.png ${STAGEDIR}${PREFIX}/share/pixmaps/transmission-qt.png
+
+.include "${MASTERDIR}/Makefile"
