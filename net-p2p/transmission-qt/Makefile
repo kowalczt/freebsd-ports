@@ -18,8 +18,6 @@ PLIST=		${.CURDIR}/pkg-plist
 
 SLAVEPORT=	qt
 
-.include bsd.port.post.mk
-
 post-install: <<EOD
             ${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
             ${INSTALL_DATA} ${WRKSRC}/qt/icons/transmission.png \
