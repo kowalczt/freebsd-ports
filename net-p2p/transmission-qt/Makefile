@@ -18,9 +18,4 @@ PLIST=		${.CURDIR}/pkg-plist
 
 SLAVEPORT=	qt
 
-post-install:
-	${REINPLACE_CMD} -i "" -e '/^Icon=/ s/\$/-qt/' ${STAGEDIR}${DESKTOPDIR}/transmission-qt.desktop
-	${MKDIR} ${STAGEDIR}${PREFIX}/share/pixmaps
-	${INSTALL_DATA} ${WRKSRC}/qt/icons/transmission.png ${STAGEDIR}${PREFIX}/share/pixmaps/transmission-qt.png
-
 .include "${MASTERDIR}/Makefile"
